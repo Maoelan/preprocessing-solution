@@ -30,7 +30,8 @@ jobs:
       - name: Run data preprocessing script
         run: |
           # Pastikan direktori output ada sebelum script dijalankan
-          mkdir -p preprocessing/namadataset_preprocessing
+          cd preprocessing
+          mkdir -p namadataset_preprocessing
           python preprocessing/automate_Wanda-Gustrifa.py
 
       - name: Upload preprocessed data as artifact

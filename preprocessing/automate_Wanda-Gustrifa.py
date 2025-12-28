@@ -101,7 +101,7 @@ if __name__ == "__main__":
         X_preprocessed, y_target, preprocessor_obj = preprocess_diabetes_data(
             df_raw,
             is_training=True,
-            preprocessor_path="namadataset_preprocessing/preprocessor_dataset.joblib" 
+            preprocessor_path="preprocessing/namadataset_preprocessing/preprocessor_dataset.joblib" 
         )
         print("\nData preprocessed for training (automated).")
         print("Shape X_preprocessed:", X_preprocessed.shape)
@@ -111,10 +111,10 @@ if __name__ == "__main__":
         # Save data
         preprocessed_data = X_preprocessed.copy()
         preprocessed_data['Diagnosis'] = y_target 
-        preprocessed_data.to_csv("namadataset_preprocessing/preprocessed_diabetes_data_py.csv", index=False)
+        preprocessed_data.to_csv("preprocessing/namadataset_preprocessing/preprocessed_diabetes_data_py.csv", index=False)
         print("Preprocessed data saved to namadataset_preprocessing/preprocessed_diabetes_data.csv")
 
     except FileNotFoundError:
-        print("Error: Pastikan file diabetes_health_dataset.csv ada di folder ../namadataset_raw/.")
+        print("Error: Pastikan file diabetes_health_dataset.csv ada di folder /namadataset_raw/.")
     except Exception as e:
         print(f"Terjadi kesalahan: {e}")

@@ -39,4 +39,3 @@ jobs:
           name: preprocessed-diabetes-data
           path: preprocessing/namadataset_preprocessing/preprocessed_diabetes_data.csv
           retention-days: 10
-          if-no-files-found: error

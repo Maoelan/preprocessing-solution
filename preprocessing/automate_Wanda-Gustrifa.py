@@ -111,7 +111,7 @@ if __name__ == "__main__":
         # Save data
         preprocessed_data = X_preprocessed.copy()
         preprocessed_data['Diagnosis'] = y_target 
-        preprocessed_data.to_csv("preprocessing/namadataset_preprocessing/preprocessed_diabetes_data_py.csv", index=False)
+        preprocessed_data.to_csv("preprocessing/namadataset_preprocessing/preprocessed_diabetes_data.csv", index=False)
         print("Preprocessed data saved to namadataset_preprocessing/preprocessed_diabetes_data.csv")
 
     except FileNotFoundError:
